@@ -1,0 +1,362 @@
+body {
+  background-color: #f0f0f0;
+}
+.navbar-custom {
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+  z-index: 1030;
+  position: fixed;
+  width: 100%;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: #000000;
+  transition: transform 0.3s;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #5c2d91;
+  transform: scale(1.1);
+}
+
+.navbar-custom .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #5c2d91;
+  transition: width 0.3s;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.navbar-custom.scrolled {
+  background-color: #f0f0f0;
+}
+
+.image-section {
+  position: relative;
+  background-color: #f0f0f0;
+  background-size: cover;
+  height: 600px;
+}
+
+.image-section h1,
+.image-section button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+}
+
+.image-section h1 {
+  top: 25%;
+}
+
+.image-section p {
+  top: 25%;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000000;
+}
+
+.image-section button {
+  display: inline-block;
+  text-decoration: none;
+  top: 25%;
+  left: -50%;
+  border: 2px solid #4a4a4a;
+  position: relative;
+  color: #000000;
+}
+
+.image-section button:hover {
+  border: 2px solid #5c2d91;
+  background-color: #5c2d91;
+  transition: 1s;
+  color: #f0f0f0;
+}
+
+.card {
+  background-color: #e6e6fa;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px 0px rgba(188, 188, 242, 5.6);
+  transition: 0.5s;
+}
+
+.card-header,
+.card-body {
+  color: #000000;
+}
+
+.card-body .btn {
+  display: block;
+  margin: auto;
+  color: #000000;
+}
+
+.btn-primary {
+  border: 2px solid #4a4a4a;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  border: 2px solid #5c2d91;
+  background-color: #5c2d91;
+  color: #f0f0f0;
+}
+
+.btn-explore {
+  border: 2px solid #4a4a4a;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  width: 25%;
+  position: relative;
+  left: 425px;
+  color: #000000;
+}
+
+.btn-explore:hover {
+  background-color: #5c2d91;
+  color: #f0f0f0;
+}
+
+.carousel-inner {
+  background-color: #e6e6fa;
+  transition: all 0.3s ease;
+  top: 10%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.carousel-inner h5,
+.carousel-inner p {
+  color: #000000;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -10px;
+}
+
+.carousel-control-next {
+  right: -10px;
+}
+
+.text-center {
+  padding: 20px;
+}
+
+.footer {
+  background-color: #e6e6fa;
+  position: relative;
+  top: 50px;
+}
+
+.footer .navbar-heading {
+  text-align: center;
+}
+
+.footer h5,
+.footer p,
+.footer a {
+  color: #000000;
+}
+.footer a {
+  width: 50px;
+  position: relative;
+  left: 100px;
+}
+
+.footer a:hover {
+  color: #a768dd;
+}
+
+.contact-page {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.contact-page h2 {
+  color: #000000;
+}
+
+.contact-page .form-control {
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  background-color: #e6e6fa;
+  color: #000000;
+}
+
+.contact-page .form-control:focus {
+  border: 2px solid #5c2d91;
+  box-shadow: none;
+}
+
+.contact-page .btn-primary {
+  border: 2px solid #4a4a4a;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  width: 25%;
+  position: relative;
+  left: 425px;
+  top: 10px;
+  color: #000000;
+}
+
+.contact-page .btn-primary:hover {
+  background-color: #5c2d91;
+  color: #f0f0f0;
+}
+
+/* Slide-in animation left */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-250%);
+  }
+  100% {
+    transform: translateX(25);
+  }
+}
+
+.image-section h1,
+.image-section button,
+.image-section p {
+  animation: slideIn 2s;
+}
+
+/* Slide-in animation right */
+@keyframes slideRight {
+  0% {
+    transform: translate(250%);
+  }
+  100% {
+    transform: translateX(25);
+  }
+}
+
+/* Slide-in animation up */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card,
+.card-body {
+  animation: slideUp 2s;
+}
+
+.img-fluid {
+  animation: slideRight 2s;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #4a4a4a;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .navbar-custom {
+    position: static;
+  }
+
+  .image-section {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-section h1,
+  .image-section button {
+    position: static;
+    transform: none;
+  }
+
+  .image-section h1 {
+    margin-top: 20px;
+  }
+
+  .image-section button {
+    margin-bottom: 20px;
+  }
+
+  .image-section p {
+    width: 100%;
+    transform: none;
+    position: relative;
+    left: 10px;
+    animation: slideInMobile 2s;
+  }
+
+  /* New slide-in animation for mobile */
+  @keyframes slideInMobile {
+    0% {
+      transform: translateX(250%);
+    }
+    100% {
+      transform: translateX(25);
+    }
+  }
+
+  .btn-explore {
+    width: 100%;
+    left: 0;
+  }
+
+  .carousel-inner {
+    top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .footer a {
+    left: 0;
+    width: auto;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .contact-page .btn-primary {
+    width: 100%;
+    left: 0;
+  }
+}
